@@ -1,20 +1,20 @@
-f = open("26_2.txt")  # открытие файла
+f = open("26_2.txt")
 n, r = map(int, f.readline().split())
 s = []
 for i in range(n):
-    s.append(int(f.readline()))  # append - добавление в список
+    s.append(int(f.readline()))
 s.sort(reverse=True)  # сортировка от большего к меньшему
 
-s = s[:n // 3]  # треть лучших результатов (претенденты на призерство)
-p = s[0]  # лучший результат
-k = 0  # количество призеров
-for i in range(len(s)):
-    if p - s[i] < 10 and s[i] > (r / 2):  # если разница иеньше 10 и результат выше половины
+k = 1
+mx = n // 3
+mn = 2**32
+for i in range(1, len(s)):
+    if s[i - 1] - s[i] < 10 and s[i] > (r / 2): 
         k += 1
-        p = s[i]
-print(k, p)
-
-# 7 275
-
+        mn = min(mn, s[i])
+    if k == mx:
+        break
+print(k, mn)
+print(s)
 
 
