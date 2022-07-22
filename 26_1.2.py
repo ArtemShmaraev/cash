@@ -28,4 +28,6 @@ for i in range(n):
     mx = max(mx, s[i][2])
 print(summa, mx)
 
+# 8933 975
+
 
