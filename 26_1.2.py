@@ -10,7 +10,7 @@ for i in range(n):
         m = 50
     gorod += m
     s.append([d, m, k])  # цена, готовность, потрачено на район
-
+s.sort()
 i = 0
 while (gorod / n) < 70:
     if s[i][1] < 100:
