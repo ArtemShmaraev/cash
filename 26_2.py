@@ -14,5 +14,7 @@ for i in range(len(s)):
         p = s[i]
 print(k, p)
 
+# 7 275
+
 
 
