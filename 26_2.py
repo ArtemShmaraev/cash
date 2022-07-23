@@ -17,4 +17,4 @@ for i in range(1, len(s)):
 print(k, mn)
 print(s)
 
-# 7 195
+# 7 192
